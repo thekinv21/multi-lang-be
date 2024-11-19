@@ -1,7 +1,6 @@
 package com.thekinv21.domain.language;
 
 import com.thekinv21.infra.exception.ExceptionMessage;
-import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

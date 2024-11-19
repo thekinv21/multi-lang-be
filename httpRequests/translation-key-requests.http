@@ -1,0 +1,26 @@
+### Set variable
+@id=1
+
+###
+GET http://localhost:8080/api/translation-keys
+Content-Type: application/json
+
+###
+GET http://localhost:8080/api/translation-keys/{{id}}
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/translation-keys
+Content-Type: application/json
+
+{
+  "keyName": "user"
+}
+
+###
+PUT http://localhost:8080/api/translation-keys/{{id}}
+Content-Type: application/json
+
+###
+DELETE http://localhost:8080/api/translation-keys/{{id}}
+Content-Type: application/json
