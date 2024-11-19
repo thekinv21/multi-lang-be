@@ -1,0 +1,39 @@
+### Set variable
+@id=1
+@languageId=2
+
+###
+GET http://localhost:8080/api/translation-values
+Content-Type: application/json
+
+###
+GET http://localhost:8080/api/translation-values/language/{{languageId}}
+Content-Type: application/json
+
+###
+GET http://localhost:8080/api/translation-values/{{id}}
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/translation-values
+Content-Type: application/json
+
+{
+  "keyId": 1,
+  "languageId": 1,
+  "translatedText": "user"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
