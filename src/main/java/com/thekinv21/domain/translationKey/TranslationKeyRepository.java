@@ -1,4 +1,4 @@
-package com.thekinv21.translationKey;
+package com.thekinv21.domain.translationKey;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

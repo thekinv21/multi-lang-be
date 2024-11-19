@@ -1,6 +1,5 @@
-package com.thekinv21.language;
+package com.thekinv21.domain.language;
 
-import lombok.experimental.Delegate;
 import org.springframework.stereotype.Component;
 
 @Component

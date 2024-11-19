@@ -1,4 +1,4 @@
-package com.thekinv21.language;
+package com.thekinv21.domain.language;
 
 import java.util.List;
 

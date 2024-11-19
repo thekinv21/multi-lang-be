@@ -1,4 +1,4 @@
-package com.thekinv21.common;
+package com.thekinv21.domain.common;
 
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;

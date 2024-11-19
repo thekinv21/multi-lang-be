@@ -1,4 +1,4 @@
-package com.thekinv21.language;
+package com.thekinv21.domain.language;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

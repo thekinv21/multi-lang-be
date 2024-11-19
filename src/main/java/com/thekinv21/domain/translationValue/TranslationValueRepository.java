@@ -1,4 +1,4 @@
-package com.thekinv21.translationValue;
+package com.thekinv21.domain.translationValue;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

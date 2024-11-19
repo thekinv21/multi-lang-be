@@ -1,13 +1,16 @@
-package com.thekinv21.language;
+package com.thekinv21.domain.language;
 
+import com.thekinv21.infra.exception.ExceptionMessage;
+import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.thekinv21.language.LanguageMapper.convertToDTO;
-import static com.thekinv21.language.LanguageMapper.convertToEntity;
+import static com.thekinv21.domain.language.LanguageMapper.convertToDTO;
+import static com.thekinv21.domain.language.LanguageMapper.convertToEntity;
+import static com.thekinv21.infra.exception.helper.ExceptionUtil.buildException;
 
 @RequiredArgsConstructor
 @Service
@@ -27,7 +30,7 @@ public class LanguageServiceImpl implements LanguageService {
     @Override
     public LanguageDTO getLanguageById(Long id) {
         Language language = languageRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Language not found with id: " + id));
+                .orElseThrow(() -> buildException(ExceptionMessage.NOT_FOUND_EXCEPTION, id));
         return convertToDTO(language);
     }
 
@@ -41,7 +44,7 @@ public class LanguageServiceImpl implements LanguageService {
     @Override
     public LanguageDTO updateLanguage(Long id, LanguageDTO languageDTO) {
         Language language = languageRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Language not found with id: " + id));
+                .orElseThrow(() -> buildException(ExceptionMessage.NOT_FOUND_EXCEPTION, id));
 
         language.setCode(languageDTO.getCode());
         Language updatedLanguage = languageRepository.save(language);
@@ -51,7 +54,7 @@ public class LanguageServiceImpl implements LanguageService {
     @Override
     public void deleteLanguage(Long id) {
         Language language = languageRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Language not found with id: " + id));
+                .orElseThrow(() -> buildException(ExceptionMessage.NOT_FOUND_EXCEPTION, id));
         languageRepository.delete(language);
     }
 

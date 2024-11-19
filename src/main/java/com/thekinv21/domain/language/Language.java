@@ -1,7 +1,7 @@
-package com.thekinv21.language;
+package com.thekinv21.domain.language;
 
-import com.thekinv21.common.BaseEntity;
-import com.thekinv21.translationValue.TranslationValue;
+import com.thekinv21.domain.common.BaseEntity;
+import com.thekinv21.domain.translationValue.TranslationValue;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

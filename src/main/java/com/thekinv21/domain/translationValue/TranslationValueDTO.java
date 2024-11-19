@@ -1,4 +1,4 @@
-package com.thekinv21.translationValue;
+package com.thekinv21.domain.translationValue;
 
 import lombok.Getter;
 import lombok.Setter;
