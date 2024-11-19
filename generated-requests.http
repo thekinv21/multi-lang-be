@@ -1,0 +1,32 @@
+### Set variable
+@id=1
+
+### Get all languages
+GET http://localhost:8080/api/languages
+Content-Type: application/json
+
+
+### Get language by ID
+GET http://localhost:8080/api/languages/{{id}}
+Content-Type: application/json
+
+###
+POST http://localhost:8080/api/languages
+Content-Type: application/json
+
+{
+  "code": "TR"
+}
+
+###
+PUT http://localhost:8080/api/languages/{{id}}
+Content-Type: application/json
+
+{
+  "id": 1,
+  "code": "TR_updated"
+}
+
+###
+DELETE http://localhost:8080/api/languages/{{id}}
+Content-Type: application/json
